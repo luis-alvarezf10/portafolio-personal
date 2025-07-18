@@ -1,5 +1,3 @@
-// About.js
-import React from 'react';
 import PauseOnHover from './Carousel';
 import renderCards from './cards';
 import SkillStars from './star_list';

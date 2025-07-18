@@ -1,9 +1,9 @@
-import React, { useState, useMemo, useEffect } from 'react';  // <-- Importar useMemo
+import { useState, useMemo, useEffect } from 'react';  // <-- Importar useMemo
 import Header from './components/Header';
 import Footer from './components/Footer';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import About from './sections/About';
+import Projects from './sections/Projects';
+import Contact from './sections/Contact';
 import './App.css';
 import { createTheme, ThemeProvider, CssBaseline } from '@mui/material';
 

@@ -2,7 +2,7 @@
   "name": "mi-portafolio-react",
   "version": "1.0.0",
   "description": "Proyecto de portafolio para aprender React",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
