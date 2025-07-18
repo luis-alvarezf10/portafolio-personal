@@ -1,0 +1,45 @@
+{
+  "name": "mi-portafolio-react",
+  "version": "1.0.0",
+  "description": "Proyecto de portafolio para aprender React",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@mui/icons-material": "^7.2.0",
+    "@mui/material": "^7.2.0",
+    "aos": "^2.3.4",
+    "canvas-confetti": "^1.9.3",
+    "framer-motion": "^12.23.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "react-scripts": "5.0.1",
+    "react-slick": "^0.30.3",
+    "react-tsparticles": "^2.9.3",
+    "slick-carousel": "^1.8.1",
+    "tsparticles": "^2.9.3",
+    "tsparticles-slim": "^2.12.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

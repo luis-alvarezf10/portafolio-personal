@@ -1,0 +1,105 @@
+.main-info{
+  justify-content: center ;
+  align-items: center;
+  text-align: center;
+}
+.main-info img{
+  position: relative;
+  z-index: 1;
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 4px;
+  background: linear-gradient(to bottom, #5d2747, #9f3647, #db4648, #fb9553);
+}
+
+#subtittle{
+    color: #727272;
+}
+
+.main-info img::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: white;
+}
+
+#fullname{
+    font-size: 3em;
+}
+
+.main-info p{
+    text-align: justify;    
+    font-size: 1.2em;
+}
+
+.view-social-media{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.list-social-media{
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Para que se acomoden bien en pantallas pequeñas */
+  gap: 1em;
+}
+
+#download-button {
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+  border-radius: 30px;
+  margin: 0.5em;
+  width: 10em;
+  height: 2.5em;
+  padding: 0;
+  font-size: 20px;
+  background: linear-gradient(to right, #db4648, #fb9553);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease; /* Transición suave */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#download-button:hover {
+  transform: scale(1.05); /* Pequeño zoom */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
+  filter: brightness(1.1); /* Aumenta un poco el brillo */
+  cursor: pointer;
+}
+
+
+.studies-container{
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.studies-cards{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.container-languages{
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+@keyframes zoomAuto {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+.skill-card {
+  animation: zoomAuto 4s ease-in-out infinite;
+}
