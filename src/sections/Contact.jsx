@@ -15,7 +15,7 @@ import {
 } from '@mui/material';
 
 
-import { fireConfetti } from './confetti'; // ajusta la ruta
+import { fireConfetti } from '../components/UI/Confetti'; 
 
 function Contact({ darkMode = false }) {
   const theme = useTheme();

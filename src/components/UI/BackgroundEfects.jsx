@@ -1,16 +1,17 @@
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+
+import colors from '../../styles/Colors'
 
 function BackgroundEffects({ isDarkMode }) {
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
 
-  // Ajuste colores y opacidades para modo claro y oscuro
-  const fontColor = isDarkMode ? "#ff79c6" : "rgba(80, 80, 80, 0.5)";
-// rosa para dark, gris oscuro translúcido para light
-  const opacityValue = isDarkMode ? 0.3 : 0.4; // opacidad mayor en light para mejor visibilidad
+  // ajuste colores y opacidades segun sea el color de tema
+  const fontColor = isDarkMode ? colors.orange : "rgba(80, 80, 80, 0.5)";
+  const opacityValue = 0.5; 
 
   const options = {
     fpsLimit: 30,

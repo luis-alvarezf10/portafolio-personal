@@ -14,9 +14,6 @@
   background: linear-gradient(to bottom, #5d2747, #9f3647, #db4648, #fb9553);
 }
 
-#subtittle{
-    color: #727272;
-}
 
 .main-info img::before {
   content: '';

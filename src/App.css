@@ -19,47 +19,6 @@ main, section {
 
 main {
   flex: 1;
-}
-
-.header {
-  display: flex;
-  background: #1d1d1d;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.header nav {
-  display: flex;
-  align-items: center;
-}
-
-.header nav button {
-  transition: background 0.3s;
-}
-
-.me{
-  display: flex;
-  align-items: end; 
-}
-
-.me h1{
-  font-size: 2em;
-}
-
-.me h2{
-  color: #727272;
-  font-weight:normal;
-  margin-left: 1rem;
-  font-size: 1.5em;
-}
-
-main {
   padding: 2rem;
 }
 

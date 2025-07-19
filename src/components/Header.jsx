@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import {
   Drawer,
   Button,
@@ -7,7 +8,9 @@ import {
   useMediaQuery,
   useTheme
 } from '@mui/material';
+
 import {
+  Translate,
   Menu,
   Person,
   Work,
@@ -16,7 +19,14 @@ import {
   NightsStay
 } from '@mui/icons-material';
 
+import { useTranslation } from 'react-i18next';
+
+import LanguageSwitch from './UI/LanguageSwitch'
+
+import colors from '../styles/Colors'
+
 function Header({ activeSection, setActiveSection, darkMode, toggleDarkMode }) {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
 
   const menuItems = [
@@ -29,12 +39,23 @@ function Header({ activeSection, setActiveSection, darkMode, toggleDarkMode }) {
     setOpen(newOpen);
   };
 
+  const { i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'es' ? 'en' : 'es';
+    i18n.changeLanguage(newLang);
+  };
+
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('md')); // md ≈ 960px
 
   const DrawerList = (
+    // caja contenedora de menuitems de mui
     <Box
-      sx={{ width: 250,  overflowX: 'hidden',}}
+      sx={{ 
+        width: 250,  
+        overflowX: 'hidden',
+      }}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
@@ -82,17 +103,34 @@ function Header({ activeSection, setActiveSection, darkMode, toggleDarkMode }) {
         color: theme.palette.text.primary
       }}
     >
-      <div className="me">
-        <h1>Luis Álvarez</h1>
-        <h2>Ingeniería de sistemas</h2>
+      <div className="me" 
+        style={{
+          display: 'flex',
+          alignItems: 'end',
+        }}      
+      >
+        <h1 style={{fontSize: 'e2m'}}>Luis Álvarez</h1>
+        <h2 
+          style={{
+            color: colors.dark_grey,
+            fontWeight: 'normal',
+            marginLeft: '1rem',
+            fontSize: '1.5em'
+          }}        
+        >{t('career')}</h2>
       </div>
-
-      <nav style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-        {/* Botón toggle Dark Mode */}
-        <IconButton onClick={toggleDarkMode} color="inherit" aria-label="toggle dark mode">
+      <nav 
+        style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          gap: '1rem' 
+        }}
+      >
+          {/* boton de dark mode */}
+        <IconButton onClick={toggleDarkMode} color="inherit" aria-label="Cambiar color de tema">
           {darkMode ? <WbSunny /> : <NightsStay />}
         </IconButton>
-
+        <LanguageSwitch/>
         {isSmallScreen ? (
           <>
             <IconButton onClick={toggleDrawer(true)} color="inherit" aria-label="menu">

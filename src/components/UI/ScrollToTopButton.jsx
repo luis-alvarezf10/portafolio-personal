@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Fab, Zoom, useTheme } from '@mui/material';
 import { KeyboardArrowUp } from '@mui/icons-material';
+
+import colors from '../../styles/Colors'
 
 const ScrollToTopButton = () => {
   const [visible, setVisible] = useState(false);
@@ -31,9 +33,9 @@ const ScrollToTopButton = () => {
           right: 30,
           zIndex: 10,
           boxShadow: theme.shadows[4],
-          backgroundColor: theme.palette.primary.main,
+          backgroundColor: colors.red,
           '&:hover': {
-            backgroundColor: theme.palette.secondary.main
+            backgroundColor: colors.dark_pink,
           },
         }}
         aria-label="scroll back to top"

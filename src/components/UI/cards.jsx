@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react'
 import { Card, CardContent, Typography, Grid, CardMedia } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 function renderCards(studies, theme) {
   return (
@@ -12,8 +13,9 @@ function renderCards(studies, theme) {
 }
 
 function MouseFollowCard({ study, theme }) {
+  const { t } = useTranslation();
   const [mousePos, setMousePos] = React.useState({ x: -100, y: -100 });
-
+ 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     setMousePos({
@@ -26,19 +28,8 @@ function MouseFollowCard({ study, theme }) {
     setMousePos({ x: -100, y: -100 });
   };
 
-  // Colores distintos para modo claro y oscuro
-  const gradientLight = `radial-gradient(circle 10em at ${mousePos.x}px ${mousePos.y}px, 
-    rgba(159, 54, 71, 0.4) 0%, 
-    rgba(219, 70, 72, 0.3) 40%, 
-    rgba(251, 149, 83, 0.2) 70%, 
-    transparent 90%)`;
-
-  const gradientDark = `radial-gradient(circle 10em at ${mousePos.x}px ${mousePos.y}px, 
-    rgba(255, 255, 255, 0.15) 0%, 
-    rgba(255, 255, 255, 0.1) 40%, 
-    rgba(255, 255, 255, 0.05) 70%, 
-    transparent 90%)`;
-
+  const gradientLight = `radial-gradient(circle 10em at ${mousePos.x}px ${mousePos.y}px, rgba(159, 54, 71, 0.4) 0%, rgba(219, 70, 72, 0.3) 40%, rgba(251, 149, 83, 0.2) 70%, transparent 90%)`;
+  const gradientDark = `radial-gradient(circle 10em at ${mousePos.x}px ${mousePos.y}px, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.05) 70%, transparent 90%)`;
   const background = theme.palette.mode === 'dark' ? gradientDark : gradientLight;
 
   return (
@@ -71,13 +62,9 @@ function MouseFollowCard({ study, theme }) {
           <Typography
             variant="h6"
             gutterBottom
-            sx={{
-              fontWeight: 'bold',
-              fontSize: '1.1em',
-              textAlign: 'center',
-            }}
+            sx={{ fontWeight: 'bold', fontSize: '1.1em', textAlign: 'center' }}
           >
-            {study.name}
+            {t(`studies.${study.key}.name`)}
           </Typography>
           <CardMedia
             component="img"
@@ -89,16 +76,15 @@ function MouseFollowCard({ study, theme }) {
               objectFit: 'contain',
             }}
             image={study.image}
-            alt={`${study.name} logo`}
+            alt={t(`studies.${study.key}.name`)}
           />
           <Typography variant="body1" color="text.secondary" textAlign={'center'}>
-            {study.degree}
+            {t(`studies.${study.key}.degree`)}
           </Typography>
         </CardContent>
       </Card>
     </Grid>
   );
 }
-
 // Al final de tu archivo cards.js
 export default renderCards;
