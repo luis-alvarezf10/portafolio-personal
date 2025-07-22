@@ -27,11 +27,10 @@
     font-size: 3em;
 }
 
-.main-info p{
-    text-align: justify;    
-    font-size: 1.2em;
+p {
+  font-size: 1.2em;
+  text-align: justify;  
 }
-
 .view-social-media{
   flex-direction: column;
   justify-content: center;

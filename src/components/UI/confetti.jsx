@@ -1,7 +1,7 @@
 import confetti from "canvas-confetti";
 
 export const fireConfetti = () => {
-  const duration = 1 * 4000;
+  const duration = 1 * 6000;
   const animationEnd = Date.now() + duration;
   const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 2000 };
 

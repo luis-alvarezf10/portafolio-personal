@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import { Fab, Zoom, useTheme } from '@mui/material';
-import { KeyboardArrowUp } from '@mui/icons-material';
+import { useState, useEffect } from "react";
+import { Fab, Zoom, useTheme } from "@mui/material";
+import { KeyboardArrowUp } from "@mui/icons-material";
 
-import colors from '../../styles/Colors'
+import colors from "../../consts/Colors";
 
 const ScrollToTopButton = () => {
   const [visible, setVisible] = useState(false);
@@ -13,12 +13,12 @@ const ScrollToTopButton = () => {
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -28,13 +28,13 @@ const ScrollToTopButton = () => {
         size="medium"
         onClick={scrollToTop}
         sx={{
-          position: 'fixed',
+          position: "fixed",
           bottom: 30,
           right: 30,
           zIndex: 10,
           boxShadow: theme.shadows[4],
           backgroundColor: colors.red,
-          '&:hover': {
+          "&:hover": {
             backgroundColor: colors.dark_pink,
           },
         }}

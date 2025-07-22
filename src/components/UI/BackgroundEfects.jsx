@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-import colors from '../../styles/Colors'
+import colors from "../../consts/Colors";
 
 function BackgroundEffects({ isDarkMode }) {
   const particlesInit = useCallback(async (engine) => {
@@ -11,7 +11,7 @@ function BackgroundEffects({ isDarkMode }) {
 
   // ajuste colores y opacidades segun sea el color de tema
   const fontColor = isDarkMode ? colors.orange : "rgba(80, 80, 80, 0.5)";
-  const opacityValue = 0.5; 
+  const opacityValue = 0.5;
 
   const options = {
     fpsLimit: 30,
@@ -52,7 +52,11 @@ function BackgroundEffects({ isDarkMode }) {
     },
     interactivity: {
       detectsOn: "canvas",
-      events: { onHover: { enable: false }, onClick: { enable: false }, resize: true },
+      events: {
+        onHover: { enable: false },
+        onClick: { enable: false },
+        resize: true,
+      },
     },
     detectRetina: true,
   };

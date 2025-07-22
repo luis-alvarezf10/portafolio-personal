@@ -4,7 +4,6 @@ import {
   SiSqlite,
   SiFirebase,
   SiMongodb,
-  SiAmazonwebservices
 } from 'react-icons/si';
 
 const databases = [
@@ -13,7 +12,6 @@ const databases = [
   { name: 'SQLite', icon: <SiSqlite size={40} className="skill-icon" /> },
   { name: 'Firebase', icon: <SiFirebase size={40} className="skill-icon" /> },
   { name: 'MongoDB', icon: <SiMongodb size={40} className="skill-icon" /> },
-  { name: 'AWS', icon: <SiAmazonwebservices size={40} className="skill-icon" /> },
 ];
 
 export default databases;

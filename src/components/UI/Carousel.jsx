@@ -1,15 +1,15 @@
 // Carousel.js
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import './Carousel.css';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./Carousel.css";
 
-import { cloneElement } from 'react';
+import { cloneElement } from "react";
 
-import { useTheme } from '@mui/material/styles';
-import { Box } from '@mui/material';
+import { useTheme } from "@mui/material/styles";
+import { Box } from "@mui/material";
 
-function PauseOnHover({ items, }) {
+function PauseOnHover({ items }) {
   const theme = useTheme();
 
   const settings = {
@@ -45,12 +45,12 @@ function PauseOnHover({ items, }) {
               color: theme.palette.text.primary,
               p: 2,
               borderRadius: 1,
-              textAlign: 'center',
-              userSelect: 'none',
+              textAlign: "center",
+              userSelect: "none",
             }}
           >
             <div className="skill-content">
-              {cloneElement(item.icon, { className: 'skill-icon' })}
+              {cloneElement(item.icon, { className: "skill-icon" })}
               <span className="skill-name">{item.name}</span>
             </div>
           </Box>

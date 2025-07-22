@@ -1,13 +1,13 @@
-import React from 'react';
-import { Switch, FormControlLabel } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import { Switch, FormControlLabel } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const LanguageSwitch = () => {
   const { i18n } = useTranslation();
 
   const handleChange = (event) => {
     const isEnglish = event.target.checked;
-    i18n.changeLanguage(isEnglish ? 'en' : 'es');
+    i18n.changeLanguage(isEnglish ? "en" : "es");
   };
 
   return (
@@ -15,7 +15,7 @@ const LanguageSwitch = () => {
       control={
         <Switch
           onChange={handleChange}
-          checked={i18n.language === 'en'}
+          checked={i18n.language === "en"}
           color="primary"
         />
       }
