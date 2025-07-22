@@ -27,3 +27,6 @@ Este repositorio contiene el código fuente de mi portafolio profesional desarro
 
 3. Abrir http://localhost:3000 en tu navegador
 
+## Datos:
+
+- Vi que se podía hacer push en la rama main sin necesidad de hacer `npm run deploy`, depende de una configuración.
