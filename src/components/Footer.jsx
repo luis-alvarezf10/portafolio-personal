@@ -26,7 +26,7 @@ function Footer() {
         }}
       >
         <img
-          src="/assets/img/LA.png"
+          src="https://raw.githubusercontent.com/luis-alvarezf10/portafolio-personal/main/public/assets/img/LA.png"
           alt="Mi Logo"
           style={{
             height: "4em",
@@ -34,7 +34,7 @@ function Footer() {
           }}
         />
         <img
-          src="/assets/img/nex-technology-white.png"
+          src="https://raw.githubusercontent.com/luis-alvarezf10/portafolio-personal/main/public/assets/img/nex-technology-white.png"
           alt="Logo del Negocio"
           style={{
             height: "8em",
