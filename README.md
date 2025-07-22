@@ -27,12 +27,3 @@ Este repositorio contiene el código fuente de mi portafolio profesional desarro
 
 3. Abrir http://localhost:3000 en tu navegador
 
-## Próximos pasos para aprender más:
-
-1. **Agregar más interactividad**: Contador de likes en proyectos
-2. **Usar useEffect**: Para cargar datos o efectos secundarios
-3. **Agregar routing**: Con React Router para URLs reales
-4. **Conectar con APIs**: Para datos dinámicos
-5. **Agregar animaciones**: Con CSS o librerías como Framer Motion
-
-¡Experimenta modificando los componentes y estilos para entender mejor cómo funciona React!
