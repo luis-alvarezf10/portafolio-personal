@@ -1,33 +1,17 @@
 # Mi Portafolio React - Proyecto de Aprendizaje
 
-Este es un proyecto básico de portafolio creado con React para aprender los conceptos fundamentales.
+Este repositorio contiene el código fuente de mi portafolio profesional desarrollado con React.js, diseñado para presentar mis habilidades técnicas, experiencia en proyectos y comprensión de los fundamentos del desarrollo frontend moderno.
 
 ## Conceptos de React que aprenderás:
 
-### 1. **Componentes Funcionales**
-- Cada archivo en `src/components/` es un componente reutilizable
-- Los componentes reciben `props` (propiedades) como parámetros
-
-### 2. **Estado (State) con useState**
-- `App.js`: Maneja qué sección está activa
-- `Contact.js`: Maneja los datos del formulario
-
-### 3. **Props**
-- `Header.js` recibe `activeSection` y `setActiveSection` como props
-- Permite comunicación entre componentes padre e hijo
-
-### 4. **Renderizado Condicional**
-- En `App.js` se muestra diferentes componentes según `activeSection`
-
-### 5. **Manejo de Eventos**
-- Clicks en botones de navegación
-- Envío de formularios
-- Cambios en inputs
-
-### 6. **Mapeo de Arrays**
-- Lista de habilidades en `About.js`
-- Lista de proyectos en `Projects.js`
-- Botones de navegación en `Header.js`
+### 1. **Tecnologías Principales**
+- React.js - Biblioteca principal para la construcción de interfaces.
+- React Hooks (useState, useEffect)
+- Framer Motion para animaciones
+- Material UI para la contruccion de la interfaz de usuario (tecnología que me resultó facil de utilizar)
+- React Router para navegación basada en rutas.
+- i18n para traducción al presionar el switch de lenguaje.
+- canvas para tema de efecto de fondo y confetti.
 
 ## Cómo ejecutar el proyecto:
 

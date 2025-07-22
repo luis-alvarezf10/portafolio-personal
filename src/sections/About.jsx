@@ -97,7 +97,6 @@ function About() {
         </button>
         <motion.div
           className="list-social-media"
-          whileHover={{ scale: 1.2, rotate: 5 }}
           whileTap={{ scale: 0.9 }}
         >
           {renderSocialButtons(social_media)}
