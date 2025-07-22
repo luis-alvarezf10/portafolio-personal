@@ -13,7 +13,7 @@ const projects = [
     images: [
       "assets/img/projects/calculator/cap1.png",
       "assets/img/projects/calculator/cap2.png", 
-      "assets/img/projects/calculator/cap2.png"
+      "assets/img/projects/calculator/cap3.png"
     ],
     technologies: ["C#", ".NET Winform"]
   },
