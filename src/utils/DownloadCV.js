@@ -5,7 +5,7 @@ export function downloadCV() {
   const fileName = currentLang === "en" ? "cv-luis-alvarez-en.pdf" : "cv-luis-alvarez-es.pdf";
 
   const link = document.createElement("a");
-  link.href = `/assets/documents/${fileName}`;
+  link.href = `${process.env.PUBLIC_URL}/assets/documents/${fileName}`;
   link.download = currentLang === "en" ? "Luis-Alvarez-CV-En.pdf" : "Luigi-Alvarez-CV-Es.pdf";
   document.body.appendChild(link);
   link.click();
