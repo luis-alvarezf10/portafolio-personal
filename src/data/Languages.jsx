@@ -5,7 +5,7 @@ import {
   SiCss3,
   SiJavascript,
   SiPython,
-  SiFlutter,
+  SiDart,
 } from 'react-icons/si';
 
 const languages = [
@@ -15,7 +15,7 @@ const languages = [
 { name: 'CSS3', icon: <SiCss3 size={40} color="#264de4" className="skill-icon" />, level: 5 },
 { name: 'JavaScript', icon: <SiJavascript size={40} color="#f7df1e" className="skill-icon" />, level: 3},
 { name: 'Python', icon: <SiPython size={40} color="#3776AB" className="skill-icon" />, level: 5 },
-{ name: 'Flutter', icon: <SiFlutter size={40} color="#02569B" className="skill-icon" />, level: 1 },
+{ name: 'Dart', icon: <SiDart size={40} color="#02569B" className="skill-icon" />, level: 1 },
 ];
 
 export default languages;

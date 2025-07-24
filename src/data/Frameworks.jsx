@@ -6,6 +6,7 @@ import {
   SiReact,
   SiDjango,
   SiPandas,
+  SiFlutter
 } from 'react-icons/si';
 
 const frameworks = [
@@ -16,6 +17,7 @@ const frameworks = [
     { name: 'Tailwind', icon: <SiTailwindcss size={40} className="skill-icon" /> },
     { name: 'Django', icon: <SiDjango size={40} className="skill-icon" /> },
     { name: 'Pandas', icon: <SiPandas size={40} className="skill-icon" /> },
+    { name: "Flutter", icon: <SiFlutter size={40} className="skill-icon" />}
 ];
 
 export default frameworks;
