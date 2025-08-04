@@ -59,7 +59,7 @@ function About() {
           {t("about_item")}
         </h2>
         <img
-          src="https://raw.githubusercontent.com/luis-alvarezf10/portafolio-personal/main/public/assets/img/Foto-tipo-carnet.png"
+          src="assets/img/Foto-tipo-carnet.webp"
           alt="Foto de perfil"
           loading="lazy"
         />
