@@ -54,6 +54,7 @@ function About() {
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
+        style={{ gap: "1rem", display:"flex", flexFlow: "column", justifyContent:"center", alignItems: "center", width: "100%", height:"100vh"}}
       >
         <h2 style={{ color: theme.palette.text.secondary }}>
           {t("about_item")}
@@ -77,121 +78,112 @@ function About() {
         >
           Anzoátegui, Venezuela
         </Link>
-        <div>
+        <div style={{
+          gap: "1rem",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}>
           {paragraphs.map((text, i) => (
             <p key={i}>{text}</p>
           ))}
         </div>
+        <div className="view-social-media"  style={{gap: "1rem", marginTop: "1rem"}}>
+          <button
+            id="download-button"
+            onClick={downloadCV}
+            style={{
+              color: theme.palette.text.primary,
+            }}
+          >
+            {t("download_cv")}
+            <DownloadIcon />
+          </button>
+          <motion.div
+            className="list-social-media"
+            whileTap={{ scale: 0.9 }}
+          >
+            {renderSocialButtons(social_media)}
+          </motion.div>
+        </div>
       </motion.div>
 
-      <div className="view-social-media">
-        <button
-          id="download-button"
-          onClick={downloadCV}
+      <div style={{gap:"2rem"}}>
+        <motion.div className="studies-container"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          
+        >
+          <section
+            style={{gap:"1rem", display:"flex", flexFlow: "column", justifyContent:"center", alignItems: "flex-start", width: "100%", textAlign: "start", marginBottom: "5rem"}}
+          >
+            <h2>{t("studies_title")}</h2>
+            <p>{t('studies_description')}</p>
+            {renderCards(studies, theme)}
+          </section>
+        </motion.div>
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           style={{
+            textAlign: "center",
+            marginTop: "2rem",
+            marginBottom: "2rem",
             color: theme.palette.text.primary,
+            fontSize: "3rem",
+            fontWeight: "bold",
           }}
         >
-          {t("download_cv")}
-          <DownloadIcon />
-        </button>
+          {t("knowledge")}
+        </motion.h2>
         <motion.div
-          className="list-social-media"
-          whileTap={{ scale: 0.9 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          style={{gap:"1rem", display:"flex", flexFlow: "column", justifyContent:"center", alignItems: "flex-start", width: "100%", textAlign: "start", marginBottom: "5rem"}}
         >
-          {renderSocialButtons(social_media)}
-        </motion.div>
-      </div>
-      <div className="knowledge-container"></div>
-      <motion.div className="studies-container"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <section>
-          <h2>{t("studies_title")}</h2>
-          <p>{t('studies_description')}</p>
+          <h2>{t("languages_title")}</h2>
+          <p>{t('languages_description')}</p>
           <motion.div
-            className="studies-cards"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
+            className="container-languages"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            {renderCards(studies, theme)}
+            <SkillStars skills={languages} />
           </motion.div>
-        </section>
-      </motion.div>
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        style={{
-          textAlign: "center",
-          marginTop: "2rem",
-          color: theme.palette.text.primary,
-          fontSize: "3rem",
-          fontWeight: "bold",
-        }}
-      >
-        {t("knowledge")}
-      </motion.h2>
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <h3>{t("languages_title")}</h3>
-        <p>{t('languages_description')}</p>
-      </motion.div>
-      <motion.div
-        className="container-languages"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-      >
-        <SkillStars skills={languages} />
-      </motion.div>
+        </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <h3>
-          {t("frameworks_title")}
-        </h3>
-        <p>{t('frameworks_description')}</p>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-      >
-        <PauseOnHover items={frameworks} />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <h3>{t("database_title")}</h3>
-        <p>{t('database_description')}</p>  
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-      >
-        <PauseOnHover items={databases} />
-      </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          style={{gap:"1rem", display:"flex", flexFlow: "column",justifyContent:"center", alignItems: "flex-start", textAlign: "start", marginBottom: "5rem"}}
+        >
+          <h2>
+            {t("frameworks_title")}
+          </h2>
+          <p>{t('frameworks_description')}</p>
+          <PauseOnHover items={frameworks} />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          style={{gap:"1rem", display:"flex", flexFlow: "column",justifyContent:"center", alignItems: "flex-start", textAlign: "start", marginBottom: "5rem"}}
+        >
+          <h2>{t("database_title")}</h2>
+          <p>{t('database_description')}</p>  
+          <PauseOnHover items={databases} />
+        </motion.div>
+      </div>
     </motion.section>
   );
 }

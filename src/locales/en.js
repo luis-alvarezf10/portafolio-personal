@@ -6,7 +6,6 @@ export default {
   info_me: [
     "I am a Systems Engineering student (8th semester) at Santa María University, with an expected graduation date in February 2027.",
     "I consider myself proactive, adaptable, and an excellent decision-maker. I am passionate about technology, software development, process automation with artificial intelligence, computer networks, and project management.",
-    "I mainly focus on web and mobile application development, and I am open to collaborate on new challenges that bring value to both the client and my professional growth."
   ],
   download_cv: "Download CV",
   knowledge: "Knowledge",

@@ -72,7 +72,7 @@ function BackgroundEffects({ isDarkMode }) {
         left: 0,
         width: "100vw",
         height: "100vh",
-        zIndex: 0,
+        zIndex: -1,
         pointerEvents: "none",
         filter: "blur(1.2px)",
         backgroundColor: "transparent",

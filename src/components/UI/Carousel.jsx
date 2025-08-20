@@ -49,7 +49,7 @@ function PauseOnHover({ items }) {
               userSelect: "none",
             }}
           >
-            <div className="skill-content">
+            <div className="skill-content" style={{gap: "1rem", padding: "1rem"}}>
               {cloneElement(item.icon, { className: "skill-icon" })}
               <span className="skill-name">{item.name}</span>
             </div>

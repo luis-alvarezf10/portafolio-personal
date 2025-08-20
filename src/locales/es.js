@@ -6,9 +6,8 @@ export default {
   projects_item: "Proyectos",
   contact_item: "Contacto",
   info_me: [
-    "Soy estudiante de Ingeniería de Sistemas (8vo semestre) en la prestigiosa Universidad Santa María – Núcleo Oriente, con finalización estimada en febrero de 2027.",
+    "Soy estudiante de Ingeniería de Sistemas (8vo semestre) en la Universidad Santa María – Núcleo Oriente, con finalización estimada en febrero de 2027.",
     "Me considero proactivo, adaptable y un excelente tomador de decisiones. Me apasiona la tecnología, el desarrollo de software, la automatización de procesos con inteligencia artificial, redes de computación y gestión de proyectos.",
-    "Me enfoco principalmente en el desarrollo de aplicaciones web y móviles, y estoy abierto a colaborar en nuevos desafíos que aporten valor tanto al cliente como a mi crecimiento profesional."
   ],
   download_cv: "Descargar CV",
   knowledge: "Conocimientos",
@@ -90,7 +89,7 @@ export default {
     }
   },
   technologies: "Tecnologías:",
-  contact_title: "Contactame",
+  contact_title: "Contáctame",
   contact_subtitle: "Trabajemos juntos!",
   name_label: "Nombre",
   email_label: "Email",
@@ -98,7 +97,7 @@ export default {
   submit_button: "Enviar",
   success_message: "¡Mensaje enviado con éxito! ✅",
   error_message: "¡Error al enviar el mensaje! Por favor, inténtalo de nuevo.",
-  name_placeholder: "¿Como te llamas?",
+  name_placeholder: "¿Cómo te llamas?",
   email_placeholder: "tuemail@gmail.com",
   message_placeholder: "Escribe tu mensaje aquí con tus requerimientos...",
   bad_words_detected: "⚠️ Por favor, evita el uso de lenguaje ofensivo. Este espacio está diseñado para una comunicación respetuosa y profesional.",
