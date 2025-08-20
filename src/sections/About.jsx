@@ -54,7 +54,7 @@ function About() {
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        style={{ gap: "1rem", display:"flex", flexFlow: "column", justifyContent:"center", alignItems: "center", width: "100%", height:"100vh"}}
+        style={{ gap: "1rem", display:"flex", flexFlow: "column", justifyContent:"center", alignItems: "center", width: "100%",}}
       >
         <h2 style={{ color: theme.palette.text.secondary }}>
           {t("about_item")}
